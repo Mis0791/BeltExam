@@ -1,0 +1,35 @@
+@{
+    ViewData["Title"] = "New Activity";
+}
+
+<a href="/dashboard">Dashboard</a> || <a href="/logout">Logout</a>
+<br>
+<h1>Dojo Activity Center</h1>
+<hr>
+<h2>@ViewBag.activity.Title</h2>
+    <br>
+        <td>
+            <form action="delete" method="POST">
+                <input type="hidden" name="ActivityId" value="@ViewBag.activity.ActivityId">
+                <button type="submit" name="delete">Delete</button>
+            </form>
+        </td>
+        <td>
+            <form action="join" method="POST">
+                <input type="hidden" name="ActivityId" value="@ViewBag.activity.ActivityId">
+                <button type="submit" name="join">Join</button>
+            </form>
+        </td>
+        <td>
+            <form action="leave" method="POST">
+                <input type="hidden" name="ActivityId" value="@ViewBag.activity.ActivityId">
+                <button type="submit" name="joinid">Leave</button>
+            </form>
+        </td>
+        <br>
+    <p>Event Coordinator: @ViewBag.activity.CreatedBy</p><br>
+    <p>Description: @ViewBag.activity.Description</p><br>
+    <p>Participants:</p>
+    @foreach(var p in ViewBag.activity.UserActivity){
+            <p>@p.User.FirstName @p.User.LastName</p>
+    }

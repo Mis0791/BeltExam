@@ -1,0 +1,56 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model BeltExam.Models.RegisterViewModel
+
+<div>
+    <h3>Registration</h3>
+    <br>
+        <form action="register" method="POST">
+            <label asp-for="FirstName"></label>
+            <input asp-for="FirstName"/>
+            <span asp-validation-for="FirstName"></span>
+            <br>
+            <br>
+
+            <label asp-for="LastName"></label>
+            <input asp-for="LastName"/>
+            <span asp-validation-for="LastName"></span>
+            <br>
+            <br>
+
+            <label asp-for="Email"></label>
+            <input asp-for="Email" type="email"/>
+            <span asp-validation-for="Email"></span>
+            <br>
+            <br>
+
+            <label asp-for="Password"></label>
+            <input asp-for="Password" type="password"/><br>
+            <span asp-validation-for="Password"></span>
+            <br>
+            <br>
+
+            <label asp-for="ConfirmPass"></label>
+            <input asp-for="ConfirmPass" type="password"/><br>
+            <span asp-validation-for="ConfirmPass"></span>
+            <br>
+            <br>
+
+            <input type="submit" value"Submit"/>
+        </form>
+</div>  
+    <br>
+    <h3>Login</h3>
+    <br>
+        <div>
+            <form action="login" method="POST">
+                Email: <input type="email" name="Email"/><br>
+                <br>
+                Password: <input type="password" name="Password"/><br>
+                <br>
+                <input type="submit" value"Submit"/>
+            </form>  
+        </div>  
+</div>

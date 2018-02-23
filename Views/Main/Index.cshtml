@@ -1,0 +1,63 @@
+@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<a href="/logout">Logout</a>
+<br>
+<h1>Dojo Activity Center</h1>
+<br>
+<h4>Welcome @ViewBag.UserInfo.FirstName!</h4>
+<div>
+    <br>
+    <table>
+        <thead>
+            <tr> 
+                <td>Title</td>
+                <td>Date and Time</td>
+                <td>Duration</td>
+                <td>Event Coordinator</td>
+                <td>Number of Participants</td>
+                <td>Actions</td>
+            </tr>
+        </thead>
+        <tbody>
+        @model List<BeltExam.Models.Activity>
+            @foreach (var a in Model){
+            <tr>
+                <td><a href="activity/@a.ActivityId">@a.Title</a></td>
+                <td>@a.Date.ToString("M/d") || @a.Time</td>
+                <td>@a.Duration</td>
+                <td>@a.CreatedBy</td>
+                <td>@a.UserActivity.Count</td>
+                @if(a.CreatedBy == ViewBag.UserInfo.UserId){
+                <td>
+                    <form action="delete" method="POST">
+                        <input type="hidden" name="ActivityId" value="@a.ActivityId">
+                        <button type="submit" name="delete">Delete</button>
+                    </form>
+                </td>
+                } else{
+                    if(a.UserActivity.Where(u => u.UserId == ViewBag.UserInfo.UserId).SingleOrDefault() == null)
+                        {
+                            <td>
+                                <form action="join" method="POST">
+                                    <input type="hidden" name="ActivityId" value="@a.ActivityId">
+                                    <button type="submit" name="join">Join</button>
+                                </form>
+                            </td>
+                        } else {
+                            <td>
+                                <form action="leave" method="POST">
+                                    <input type="hidden" name="ActivityId" value="@a.ActivityId">
+                                    <button type="submit" name="joinid">Leave</button>
+                                </form>
+                            </td>
+                        }
+                }
+            </tr>
+            }
+        </tbody>
+    </table>
+    <br>
+    <a href="newactivity"><button>Add New Activity!</button></a>
+</div>

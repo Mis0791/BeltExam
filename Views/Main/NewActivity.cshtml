@@ -1,0 +1,51 @@
+@model BeltExam.Models.ActivityViewModel
+@{
+    ViewData["Title"] = "New Activity";
+}
+
+<a href="/dashboard">Dashboard</a> || <a href="/logout">Logout</a>
+<br>
+<h1>Dojo Activity Center</h1>
+<hr>
+<h2>Create an Activity!</h2>
+<br>
+<div>
+    <form action="create" method="POST">
+        <label asp-for="Title"></label>
+        <input asp-for="Title"/>
+        <span asp-validation-for="Title"></span>
+        <br>
+        <br>
+
+        <label asp-for="Time"></label>
+        <input asp-for="Time"/>
+        <span asp-validation-for="Time"></span>
+        <br>
+        <br>
+
+        <label asp-for="Date"></label>
+        <input asp-for="Date" type="date"/>
+        <span asp-validation-for="Date"></span>
+        <br>
+        <br>
+
+        <label asp-for="Duration"></label>
+        <input asp-for="Duration"/><br>
+        <span asp-validation-for="Duration"></span>
+
+        <select asp-for="Duration">
+            <option value="Days">Days</option>
+            <option value="Hours">Hours</option>
+            <option value="Minutes">Minutes</option>
+        </select>
+        <br>
+        <br>
+
+        <label asp-for="Description"></label>
+        <input asp-for="Description"/>
+        <span asp-validation-for="Description"></span>
+        <br>
+        <br>
+
+        <input type="submit" value="Create Activity"/>
+    </form>

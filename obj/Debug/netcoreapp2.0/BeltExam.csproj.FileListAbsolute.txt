@@ -1,0 +1,10 @@
+/Users/michellesturgill/Desktop/Coding Dojo/C#/Belts/BeltExam/bin/Debug/netcoreapp2.0/BeltExam.deps.json
+/Users/michellesturgill/Desktop/Coding Dojo/C#/Belts/BeltExam/bin/Debug/netcoreapp2.0/BeltExam.runtimeconfig.json
+/Users/michellesturgill/Desktop/Coding Dojo/C#/Belts/BeltExam/bin/Debug/netcoreapp2.0/BeltExam.runtimeconfig.dev.json
+/Users/michellesturgill/Desktop/Coding Dojo/C#/Belts/BeltExam/bin/Debug/netcoreapp2.0/BeltExam.dll
+/Users/michellesturgill/Desktop/Coding Dojo/C#/Belts/BeltExam/bin/Debug/netcoreapp2.0/BeltExam.pdb
+/Users/michellesturgill/Desktop/Coding Dojo/C#/Belts/BeltExam/obj/Debug/netcoreapp2.0/BeltExam.csproj.CoreCompileInputs.cache
+/Users/michellesturgill/Desktop/Coding Dojo/C#/Belts/BeltExam/obj/Debug/netcoreapp2.0/BeltExam.AssemblyInfoInputs.cache
+/Users/michellesturgill/Desktop/Coding Dojo/C#/Belts/BeltExam/obj/Debug/netcoreapp2.0/BeltExam.AssemblyInfo.cs
+/Users/michellesturgill/Desktop/Coding Dojo/C#/Belts/BeltExam/obj/Debug/netcoreapp2.0/BeltExam.dll
+/Users/michellesturgill/Desktop/Coding Dojo/C#/Belts/BeltExam/obj/Debug/netcoreapp2.0/BeltExam.pdb
